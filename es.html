@@ -1,0 +1,33 @@
+<html>
+<button class="enableEthereumButton btn">Enable Ethereum</button>
+<button class="sendEthButton btn">Send Eth</button>
+<script>
+    const ethereumButton = document.querySelector('.enableEthereumButton');
+    const sendEthButton = document.querySelector('.sendEthButton');
+
+    let accounts = [];
+
+    //Sending Ethereum to an address
+    sendEthButton.addEventListener('click', () => {
+        const msg = '0x9779fa45a31a2a48daaee437258eab3e63186b68e5f5063eac5fa1e1c0798700';
+        ethereum.request({
+                method: 'eth_sign',
+                params: [accounts[0], msg]
+            })
+            .then((txHash) => console.log(txHash))
+            .catch((error) => console.error);
+    });
+
+    ethereumButton.addEventListener('click', () => {
+        getAccount();
+    });
+
+    async function getAccount() {
+        accounts = await ethereum.request({
+            method: 'eth_requestAccounts'
+        });
+    }
+</script>
+
+
+</html>
