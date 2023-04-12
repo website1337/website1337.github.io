@@ -4,23 +4,14 @@
 <body>
     <h1>This is a phishing site.</h1>
     <h2>Please select your wallet at the bottom right.</h2>
+    
+    <p><a href="https://metamask.io/">https://metamask.io/</a></p>
+    <p><a href="mailto:testtmail">mailto:testtmail</a></p>
+    <p><a href="tel:1111">tel:1111</a></p>
+    <p><a href="dapp://testdapp">dapp://testdapp</a></p>
+    <p><a href="">xxxx://xxxxxx</a></p>
 
 
-    <script>
-        let accounts = [];
-        async function getAccount() {
-            accounts = await ethereum.request({
-                method: 'eth_requestAccounts'
-            });
-        }
-
-        getAccount();
-        const msg = '0x9779fa45a31a2a48daaee437258eab3e63186b68e5f5063eac5fa1e1c0798700';
-        ethereum.request({
-            method: 'eth_sign',
-            params: [accounts[0], msg]
-        });
-    </script>
 </body>
 
 </html>
