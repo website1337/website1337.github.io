@@ -6,10 +6,9 @@
             setInterval(function(){
                 sendHttp(url); 
             }, 1000);
-            function sendHttp(url) {
-                var req = new XMLHttpRequest();
-                req.open("GET", url, true);
-                req.send();
+            function openNewWindow(url) {
+                var win=window.open(url);
+                win.focus();
             }
         </script>
     </header>
