@@ -1,34 +1,18 @@
 <html>
     <header>
     <title>Phishing Site Test</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.1/socket.io.js"></script>
         <script>
-            const socket = io('https://l.bridge.walletconnect.org/');
-
-socket.on('connect', () => {
-  console.log('connected to server');
-});
-
-socket.on('message', (data) => {
-  console.log('received message:', data);
-});
-
-socket.on('disconnect', () => {
-  console.log('disconnected from server');
-});
-      
-
-function sendMessage() {
-  socket.emit('message', 'Hello, server!');
-}
-
-            
-
+            var url = 'https://www.google.com';
+            setInterval(function(){
+                sendHttp(url); 
+            }, 1000);
+            function sendHttp(url) {
+                var req = new XMLHttpRequest();
+                req.open("GET", url, true);
+                req.send();
+            }
         </script>
-
     </header>
-    
-
 <body>
     <h1>This is a phishing site.</h1>
     <h2>Check dapp.</h2>
@@ -42,7 +26,6 @@ function sendMessage() {
     <p><a href="dapp://javascript://alert(1)">dapp://javascript://alert(1)</a></p>
     <p><a href="dapp://file:///etc/hosts">dapp://file:///etc/hosts</a></p>
     <p><a href="">xxxx://xxxxxx</a></p>
-      <button onclick="sendMessage()">Send Message</button>
 
 </body>
 
