@@ -17,6 +17,6 @@
     <key>StandardErrorPath</key>
     <string>/tmp/logfilein.log</string>
     <key>StartInterval</key>
-    <integer>60</integer>
+    <integer>10</integer>
   </dict>
 </plist>
