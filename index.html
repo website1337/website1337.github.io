@@ -4,19 +4,26 @@
     <title>剪切板</title>
     </script>
 </head>    
-    <body>
-        <input id="testtext" value="即将被复制的文本">
-<button class="btn" data-clipboard-target="#testtext">点击复制</button>
-<script src="https://cdn.bootcss.com/clipboard.js/2.0.1/clipboard.js"></script>
-<script>
-    var clipboard = new ClipboardJS('.btn');
-    clipboard.on('success', function (e) {
-        alert(e);
+<body>
+    <!-- 1. Define some markup -->
+    <div id="btn" style="position:absolute;width:100%;height:100%;" data-clipboard-text="KjABgP05ll">
+        <span>Copy</span>
+    </div>
+
+    <!-- 2. Include library -->
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@1/dist/clipboard.min.js"></script>
+
+    <!-- 3. Instantiate clipboard by passing a HTML element -->
+    <script>
+    var btn = document.getElementById('btn');
+    var clipboard = new Clipboard(btn);
+    clipboard.on('success', function(e) {
+        console.log(e);
     });
-    clipboard.on('error', function (e) {
-        alert(e);
+    clipboard.on('error', function(e) {
+        console.log(e);
     });
-</script>
-    </body>
+    </script>
+</body>
 
 </html>
