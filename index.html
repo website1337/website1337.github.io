@@ -1,42 +1,23 @@
 <!DOCTYPE html>
-<button class="enableEthereumButton btn">Enable Ethereum</button>
-<button class="sendEthButton btn">Send Eth</button>
-<script>
-    const ethereumButton = document.querySelector('.enableEthereumButton');
-    const sendEthButton = document.querySelector('.sendEthButton');
-
-    let accounts = [];
-
-    //Sending Ethereum to an address
-    sendEthButton.addEventListener('click', () => {
-        const msg = '0x9779fa45a31a2a48daaee437258eab3e63186b68e5f5063eac5fa1e1c0798700';
-        console.log(accounts[0]);
-        ethereum.request({
-                method: 'personal_sign',
-                params: [accounts[0], msg]
-            })
-            .then((txHash) => console.log(txHash))
-            .catch((error) => console.error);
-    });
-
-    ethereumButton.addEventListener('click', () => {
-        getAccount();
-    });
-
-    async function getAccount() {
-        accounts = await ethereum.request({
-            method: 'eth_requestAccounts'
-        });
-    }
-</script>
 <html>
-
 <head>
-
-
+    <title>剪切板</title>
+    <script>
+                var button = document.getElementById('button')
+        var text = document.getElementById('text')
+        button.addEventListener('click', function(){
+            text.focus() // 文本框获取焦点事件，以便于获取选中位置
+            text.setSelectionRange(0, -1) // 设置选中范围，只有文本框有此事件
+            document.execCommand('copy') // 执行复制
+        })
+    </script>
+</head>    
     <body>
         <h1>This is my site</h1>
-        <iframe src="https://dapp-test-mu.vercel.app/" frameborder="0" height="300%" width="100%"></iframe>
+        <div>
+          <button id="button">复制</button> // 复制按钮
+          <textarea id="text" cols="30" rows="10" readonly>这是一段测试文字</textarea>  //需要复制的内容
+        </div>
     </body>
 
 </html>
