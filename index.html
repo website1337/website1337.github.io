@@ -6,16 +6,18 @@
 </head>    
 <body>
     <div id="btn" style="position:absolute;width:100%;height:100%;" data-clipboard-text="你的剪切板已被劫持">
-        <span>点击页面那就说明你的剪切板已被我劫持</span>
+        <span>Hello ~ 看到我就说明你的剪切板已被我劫持 ：）</span>
     </div>
     <script>
-    var btn = document.getElementById('btn');
-    var clipboard = new Clipboard(btn);
-    clipboard.on('success', function(e) {
-        <!--console.log(e);-->
-    });
-    clipboard.on('error', function(e) {
-    });
+    document.addEventListener('DOMContentLoaded', function() {
+        var btn = document.getElementById('btn');
+        var clipboard = new Clipboard(btn);
+        clipboard.on('success', function(e) {
+            });
+        clipboard.on('error', function(e) {
+            });
+        });    
+
     </script>
 </body>
 </html>
