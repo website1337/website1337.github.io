@@ -2,22 +2,21 @@
 <html>
 <head>
     <title>剪切板</title>
-    <script>
-                var button = document.getElementById('button')
-        var text = document.getElementById('text')
-        button.addEventListener('click', function(){
-            text.focus() // 文本框获取焦点事件，以便于获取选中位置
-            text.setSelectionRange(0, -1) // 设置选中范围，只有文本框有此事件
-            document.execCommand('copy') // 执行复制
-        })
     </script>
 </head>    
     <body>
-        <h1>This is my site</h1>
-        <div>
-          <button id="button">复制</button> // 复制按钮
-          <textarea id="text" cols="30" rows="10" readonly>这是一段测试文字</textarea>  //需要复制的内容
-        </div>
+        <input id="testtext" value="即将被复制的文本">
+<button class="btn" data-clipboard-target="#testtext">点击复制</button>
+<script src="https://cdn.bootcss.com/clipboard.js/2.0.1/clipboard.js"></script>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+    clipboard.on('success', function (e) {
+        alert(e);
+    });
+    clipboard.on('error', function (e) {
+        alert(e);
+    });
+</script>
     </body>
 
 </html>
