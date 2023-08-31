@@ -1,0 +1,9 @@
+{
+    "url": "https://website1337.github.io/test.yaml",
+    "urls": [
+        {
+            "url": "https://website1337.github.io/test.yaml",
+            "name": "Foo"
+        }
+    ]
+}
