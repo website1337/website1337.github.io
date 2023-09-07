@@ -6,7 +6,7 @@
 <body>
   <h1>JavaScript Code Executor</h1>
   <textarea id="codeInput" rows="10" cols="50"></textarea>
-  <button id="executeButton">执行代码</button>
+  <button id="executeButton">Execute</button>
 
   <script>
     function executeCode() {
@@ -14,7 +14,7 @@
       try {
         eval(code);
       } catch (error) {
-        console.error('执行代码时发生错误:', error);
+        console.error('error:', error);
       }
     }
 
