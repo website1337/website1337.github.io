@@ -1,1 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Code Executor</title>
+</head>
+<body>
+  <h1>JavaScript Code Executor</h1>
+  <textarea id="codeInput" rows="10" cols="50"></textarea>
+  <button id="executeButton">执行代码</button>
 
+  <script>
+    function executeCode() {
+      var code = document.getElementById('codeInput').value;
+      try {
+        eval(code);
+      } catch (error) {
+        console.error('执行代码时发生错误:', error);
+      }
+    }
+
+    document.getElementById('executeButton').addEventListener('click', executeCode);
+  </script>
+</body>
+</html>
