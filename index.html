@@ -5,21 +5,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+  #all {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+</style>
     <title>Document</title>
-    <script>
-        function iFrameHeight() {
-            var ifm = document.getElementById("main");
-            var subWeb = document.frames ? document.frames["main"].document : ifm.contentDocument;
-            if (ifm != null && subWeb != null) {
-                $("#main").height(0);
-                $("#main").height(subWeb.body.scrollHeight);
-            }
-        }
-    </script>
+
 </head>
 
 <body>
-    <iframe id="main" name="main" width="100%" height="100%" src="https://metamask.github.io/test-dapp/" onload="iFrameHeight()" frameborder="0" scrolling="no"></iframe>
+    <iframe id="all" src="https://metamask.github.io/test-dapp/"></iframe>
 </body>
 
 </html>
